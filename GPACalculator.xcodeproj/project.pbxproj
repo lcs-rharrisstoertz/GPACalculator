@@ -15,6 +15,8 @@
 		2562831327EE131D0021DBCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2562830027EE131D0021DBCF /* Assets.xcassets */; };
 		2562832027EE143A0021DBCF /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2562831F27EE143A0021DBCF /* Course.swift */; };
 		2562832127EE143A0021DBCF /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2562831F27EE143A0021DBCF /* Course.swift */; };
+		2562832627EE15360021DBCF /* CourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2562832527EE15360021DBCF /* CourseView.swift */; };
+		2562832727EE15360021DBCF /* CourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2562832527EE15360021DBCF /* CourseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,7 @@
 		2562830B27EE131D0021DBCF /* GPACalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPACalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2562830D27EE131D0021DBCF /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		2562831F27EE143A0021DBCF /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		2562832527EE15360021DBCF /* CourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				256282FF27EE130A0021DBCF /* ContentView.swift */,
+				2562832527EE15360021DBCF /* CourseView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -207,6 +211,7 @@
 				2562832027EE143A0021DBCF /* Course.swift in Sources */,
 				2562831027EE131D0021DBCF /* ContentView.swift in Sources */,
 				2562830E27EE131D0021DBCF /* GPACalculatorApp.swift in Sources */,
+				2562832627EE15360021DBCF /* CourseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +222,7 @@
 				2562832127EE143A0021DBCF /* Course.swift in Sources */,
 				2562831127EE131D0021DBCF /* ContentView.swift in Sources */,
 				2562830F27EE131D0021DBCF /* GPACalculatorApp.swift in Sources */,
+				2562832727EE15360021DBCF /* CourseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
