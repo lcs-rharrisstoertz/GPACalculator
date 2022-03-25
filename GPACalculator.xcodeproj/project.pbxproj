@@ -13,6 +13,8 @@
 		2562831127EE131D0021DBCF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256282FF27EE130A0021DBCF /* ContentView.swift */; };
 		2562831227EE131D0021DBCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2562830027EE131D0021DBCF /* Assets.xcassets */; };
 		2562831327EE131D0021DBCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2562830027EE131D0021DBCF /* Assets.xcassets */; };
+		2562832027EE143A0021DBCF /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2562831F27EE143A0021DBCF /* Course.swift */; };
+		2562832127EE143A0021DBCF /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2562831F27EE143A0021DBCF /* Course.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,7 @@
 		2562830527EE131D0021DBCF /* GPACalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPACalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2562830B27EE131D0021DBCF /* GPACalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPACalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2562830D27EE131D0021DBCF /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		2562831F27EE143A0021DBCF /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +48,7 @@
 		256282F827EE13080021DBCF = {
 			isa = PBXGroup;
 			children = (
+				256282FE27EE130A0021DBCF /* GPACalculatorApp.swift */,
 				256282FD27EE13090021DBCF /* Shared */,
 				2562830C27EE131D0021DBCF /* macOS */,
 				2562830627EE131D0021DBCF /* Products */,
@@ -54,8 +58,9 @@
 		256282FD27EE13090021DBCF /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				256282FE27EE130A0021DBCF /* GPACalculatorApp.swift */,
-				256282FF27EE130A0021DBCF /* ContentView.swift */,
+				2562832427EE144A0021DBCF /* ViewModel */,
+				2562832327EE14450021DBCF /* Model */,
+				2562832227EE143E0021DBCF /* View */,
 				2562830027EE131D0021DBCF /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -76,6 +81,29 @@
 				2562830D27EE131D0021DBCF /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		2562832227EE143E0021DBCF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				256282FF27EE130A0021DBCF /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2562832327EE14450021DBCF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2562831F27EE143A0021DBCF /* Course.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2562832427EE144A0021DBCF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2562832027EE143A0021DBCF /* Course.swift in Sources */,
 				2562831027EE131D0021DBCF /* ContentView.swift in Sources */,
 				2562830E27EE131D0021DBCF /* GPACalculatorApp.swift in Sources */,
 			);
@@ -185,6 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2562832127EE143A0021DBCF /* Course.swift in Sources */,
 				2562831127EE131D0021DBCF /* ContentView.swift in Sources */,
 				2562830F27EE131D0021DBCF /* GPACalculatorApp.swift in Sources */,
 			);
