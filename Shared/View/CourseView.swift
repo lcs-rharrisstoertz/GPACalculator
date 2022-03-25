@@ -8,17 +8,22 @@
 import SwiftUI
 
 struct CourseView: View {
+    var Course: Course
     var body: some View {
         HStack {
-            Text("AP")
-            Text("Course name")
-            Text("Grade")
+            if Course.honors {
+                Text("AP/Honors")
+            } else {
+                Text ("Not AP/Honors")
+            }
+            Text(Course.courseName)
+            Text("\(Course.grade)")
         }
     }
 }
 
 struct CourseView_Previews: PreviewProvider {
     static var previews: some View {
-        CourseView()
+        CourseView(Course: testData[1])
     }
 }
