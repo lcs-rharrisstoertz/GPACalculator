@@ -19,6 +19,8 @@
 		2562832727EE15360021DBCF /* CourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2562832527EE15360021DBCF /* CourseView.swift */; };
 		2562832A27EE16020021DBCF /* CourseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2562832927EE16020021DBCF /* CourseList.swift */; };
 		2562832B27EE16020021DBCF /* CourseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2562832927EE16020021DBCF /* CourseList.swift */; };
+		2562832D27EE22BC0021DBCF /* getGPA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2562832C27EE22BB0021DBCF /* getGPA.swift */; };
+		2562832E27EE22BC0021DBCF /* getGPA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2562832C27EE22BB0021DBCF /* getGPA.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,7 @@
 		2562831F27EE143A0021DBCF /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		2562832527EE15360021DBCF /* CourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseView.swift; sourceTree = "<group>"; };
 		2562832927EE16020021DBCF /* CourseList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseList.swift; sourceTree = "<group>"; };
+		2562832C27EE22BB0021DBCF /* getGPA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getGPA.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,7 @@
 		2562832427EE144A0021DBCF /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				2562832C27EE22BB0021DBCF /* getGPA.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -217,6 +221,7 @@
 				2562830E27EE131D0021DBCF /* GPACalculatorApp.swift in Sources */,
 				2562832A27EE16020021DBCF /* CourseList.swift in Sources */,
 				2562832627EE15360021DBCF /* CourseView.swift in Sources */,
+				2562832D27EE22BC0021DBCF /* getGPA.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +234,7 @@
 				2562830F27EE131D0021DBCF /* GPACalculatorApp.swift in Sources */,
 				2562832B27EE16020021DBCF /* CourseList.swift in Sources */,
 				2562832727EE15360021DBCF /* CourseView.swift in Sources */,
+				2562832E27EE22BC0021DBCF /* getGPA.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
