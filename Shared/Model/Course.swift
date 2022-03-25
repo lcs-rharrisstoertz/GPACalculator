@@ -7,8 +7,14 @@
 
 import Foundation
 
-struct Task {
+struct Course {
     var honors: Bool
     var courseName: String
     var grade: Double
 }
+
+let testData = [
+Course(honors: true, courseName: "Math", grade: 70),
+Course(honors: false, courseName: "English", grade: 60),
+Course(honors: false, courseName: "Science", grade: 75)
+]
