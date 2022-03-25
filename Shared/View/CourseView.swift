@@ -11,14 +11,16 @@ struct CourseView: View {
     var Course: Course
     var body: some View {
         HStack {
-            if Course.honors {
-                Text("AP/Honors")
-            } else {
-                Text ("Not AP/Honors")
-            }
-            Text(Course.courseName)
             Text("\(Course.grade)")
+                .font(.title)
+            Text(Course.courseName)
+            if Course.honors {
+                Text("Yes")
+            } else {
+                Text ("No")
+            }
         }
+        .padding()
     }
 }
 
