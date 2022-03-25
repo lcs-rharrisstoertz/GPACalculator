@@ -29,9 +29,16 @@ func getGPA (courseList: [Course]) -> Double {
             GPASum += 2.0
         case 60...62 :
             GPASum += 1.7
-            GPASum += 4.0
+        case 57...59 :
+            GPASum += 1.3
+        case 53...56 :
+            GPASum += 1.0
+        case 50...52 :
+            GPASum += 0.7
+        case 0...49 :
+            GPASum += 0
         default:
-            GPASum += 2.0
+            GPASum += 0.0
         }
     }
     let GPA = GPASum/Double(courseList.count)
