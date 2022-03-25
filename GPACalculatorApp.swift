@@ -11,7 +11,7 @@ import SwiftUI
 struct GPACalculatorApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(courseList: courseList)
         }
     }
 }

@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct Course {
+struct Course: Identifiable {
+    var id = UUID()
     var honors: Bool
     var courseName: String
     var grade: Double

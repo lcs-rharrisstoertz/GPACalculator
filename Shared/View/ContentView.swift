@@ -8,14 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    var courseList: [Course]
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        List {
+            ForEach (courseList) { Course in
+                Text("Hello, world!")
+            }
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(courseList: courseList)
     }
 }
