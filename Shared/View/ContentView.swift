@@ -12,7 +12,7 @@ struct ContentView: View {
     var body: some View {
         List {
             ForEach (courseList) { Course in
-                Text("Hello, world!")
+                CourseView(Course: Course)
             }
         }
     }
