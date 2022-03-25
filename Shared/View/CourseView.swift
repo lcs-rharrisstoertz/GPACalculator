@@ -11,8 +11,7 @@ struct CourseView: View {
     var Course: Course
     var body: some View {
         HStack {
-            Text("\(Course.grade)")
-                .font(.title)
+            Text("\(Course.grade)%")
             Text(Course.courseName)
             if Course.honors {
                 Text("Yes")
