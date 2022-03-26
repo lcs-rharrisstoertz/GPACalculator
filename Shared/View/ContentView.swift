@@ -9,10 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
     var courseList: [Course]
+    @State private var newCourseName = ""
+    @State private var newCourseGrade = ""
+    @State private var newCourseHonors = false
     var body: some View {
-        List {
-            ForEach (courseList) { Course in
+        Form {
+            List (courseList) { Course in
                 CourseView(Course: Course)
+            }
+            HStack {
+                TextField ("Grade", text: $newCourseGrade)
+                TextField ("Course name", text: $newCourseName)
+                VStack {
+                    Text("AP/Honors")
+                    Picker ("AP/Honors", selection: $newCourseHonors) {
+                        Text("Yes").tag(true)
+                        Text("No").tag(false)
+                    }.pickerStyle(SegmentedPickerStyle())
+                }
             }
         }
     }
