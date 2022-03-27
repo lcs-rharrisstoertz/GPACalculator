@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
-    var courseList: [Course]
+    @ObservedObject var courseList: courseList
     @State private var newCourseName = ""
     @State private var newCourseGrade = ""
     @State private var newCourseHonors = false
     var body: some View {
         Form {
-            List (courseList) { Course in
+            ForEach (courseList.courses) { Course in
                 CourseView(Course: Course)
             }
             HStack {
@@ -27,6 +27,9 @@ struct ContentView: View {
                         Text("No").tag(false)
                     }.pickerStyle(SegmentedPickerStyle())
                 }
+                Button("+") {
+                    courseList.courses.append(Course(honors: newCourseHonors, courseName: newCourseName, grade: Double(newCourseGrade)!))
+                }
             }
         }
     }
@@ -34,6 +37,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(courseList: courseList)
+        ContentView(courseList: testList)
     }
 }

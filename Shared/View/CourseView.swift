@@ -25,6 +25,6 @@ struct CourseView: View {
 
 struct CourseView_Previews: PreviewProvider {
     static var previews: some View {
-        CourseView(Course: courseList[1])
+        CourseView(Course: testList.courses[1])
     }
 }
