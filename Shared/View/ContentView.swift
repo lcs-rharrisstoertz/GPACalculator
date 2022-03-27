@@ -18,7 +18,8 @@ struct ContentView: View {
                 CourseView(Course: Course)
             }
             HStack {
-                TextField ("Grade", text: $newCourseGrade)
+                TextField ("Grade", value: $newCourseGrade, formatter: NumberFormatter())
+                    .keyboardType(.decimalPad)
                 TextField ("Course name", text: $newCourseName)
                 VStack {
                     Text("AP/Honors")
