@@ -32,8 +32,15 @@ struct ContentView: View {
                 }
             }
             Section {
-                Slider (value: $newCourseGrade, in: 0.0...100.0,  label: {Text("Grade")}, minimumValueLabel: {Text("0")}, maximumValueLabel: {Text("100")})
-                TextField ("Course name", text: $newCourseName)
+                HStack {
+                    Text("Grade")
+                    Slider (value: $newCourseGrade, in: 0.0...100.0,  label: {Text("Grade")}, minimumValueLabel: {Text("0")}, maximumValueLabel: {Text("100")})
+                    Text("\(String(format: "%.1f", newCourseGrade))%")
+                }
+                HStack {
+                    Text("Course")
+                    TextField ("Course name", text: $newCourseName)
+                }
                 Toggle("AP/Honors", isOn: $newCourseHonors)
                 Button("Add") {
                     courseList.courses.append(Course(honors: newCourseHonors, courseName: newCourseName, grade: newCourseGrade))
