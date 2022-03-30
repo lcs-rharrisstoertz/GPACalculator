@@ -13,13 +13,11 @@ struct CourseView: View {
         HStack {
             Text("\(Course.grade)%")
             Text(Course.courseName)
+            Spacer()
             if Course.honors {
-                Text("Yes")
-            } else {
-                Text ("No")
+                Text("AP/Honors")
             }
         }
-        .padding()
     }
 }
 

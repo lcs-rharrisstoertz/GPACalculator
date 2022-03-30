@@ -11,7 +11,7 @@ class courseList: ObservableObject {
     @Published var courses: [Course]
     
     init(courses: [Course]) {
-        self.courses = []
+        self.courses = courses
     }
 }
 
