@@ -10,41 +10,44 @@ import SwiftUI
 struct ContentView: View {
     @ObservedObject var courseList: courseList
     @State private var newCourseName = ""
-    @State private var newCourseGrade = ""
+    @State private var newCourseGrade = 0.0
     @State private var newCourseHonors = false
     @State private var GPA = 0.0
     @State private var weighted = false
     @State private var showAPOnly = false
     var body: some View {
         Form {
-            Toggle ("Show AP/Honors Only", isOn: $showAPOnly)
-            List {
-                ForEach (courseList.courses) { Course in
-                    if showAPOnly {
-                        if Course.honors {
+            Section {
+                Toggle ("Show AP/Honors Only", isOn: $showAPOnly)
+                List {
+                    ForEach (courseList.courses) { Course in
+                        if showAPOnly {
+                            if Course.honors {
+                                CourseView(Course: Course)
+                            }
+                        } else {
                             CourseView(Course: Course)
                         }
-                    } else {
-                        CourseView(Course: Course)
                     }
                 }
             }
-            HStack {
-                TextField ("Grade", value: $newCourseGrade, formatter: NumberFormatter())
-                    .keyboardType(.decimalPad)
+            Section {
+                Slider (value: $newCourseGrade, in: 0.0...100.0,  label: {Text("Grade")}, minimumValueLabel: {Text("0")}, maximumValueLabel: {Text("100")})
                 TextField ("Course name", text: $newCourseName)
                 Toggle("AP/Honors", isOn: $newCourseHonors)
                 Button("Add") {
-                    courseList.courses.append(Course(honors: newCourseHonors, courseName: newCourseName, grade: Double(newCourseGrade)!))
+                    courseList.courses.append(Course(honors: newCourseHonors, courseName: newCourseName, grade: newCourseGrade))
                 }
             }
-            HStack {
-                Button("Calculate GPA") {
-                    GPA = getGPA(courseList: courseList.courses, weighted: weighted)
+            Section {
+                HStack {
+                    Button("Calculate GPA") {
+                        GPA = getGPA(courseList: courseList.courses, weighted: weighted)
+                    }
+                    Toggle("Weighted", isOn: $weighted)
                 }
-                Toggle("Weighted", isOn: $weighted)
+                Text("Your GPA is \(GPA)")
             }
-            Text("Your GPA is \(GPA)")
         }
     }
 }
