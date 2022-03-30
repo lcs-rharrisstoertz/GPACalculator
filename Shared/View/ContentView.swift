@@ -17,7 +17,7 @@ struct ContentView: View {
     @State private var showAPOnly = false
     var body: some View {
         Form {
-            Section {
+            Section ("Courses") {
                 Toggle ("Show AP/Honors Only", isOn: $showAPOnly)
                 List {
                     ForEach (courseList.courses) { Course in
@@ -31,7 +31,7 @@ struct ContentView: View {
                     }
                 }
             }
-            Section {
+            Section ("Add Course") {
                 HStack {
                     Text("Grade")
                     Slider (value: $newCourseGrade, in: 0.0...100.0,  label: {Text("Grade")}, minimumValueLabel: {Text("0")}, maximumValueLabel: {Text("100")})
@@ -46,7 +46,7 @@ struct ContentView: View {
                     courseList.courses.append(Course(honors: newCourseHonors, courseName: newCourseName, grade: newCourseGrade))
                 }
             }
-            Section {
+            Section ("Calculate GPA") {
                 HStack {
                     Button("Calculate GPA") {
                         GPA = getGPA(courseList: courseList.courses, weighted: weighted)
