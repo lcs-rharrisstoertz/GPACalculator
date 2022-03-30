@@ -7,8 +7,6 @@
 
 import Foundation
 
-//
-
 class Course: Identifiable, ObservableObject {
     var id = UUID()
     var honors: Bool

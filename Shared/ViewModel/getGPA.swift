@@ -7,11 +7,11 @@
 
 import Foundation
 
-func getGPA (courseList: [Course]) -> Double {
+func getGPA (courseList: [Course], weighted: Bool) -> Double {
     var GPASum = 0.0
     for Course in courseList {
         switch Course.grade {
-        case 90...100 :
+        case 90... :
             GPASum += 4.0
         case 85...89 :
             GPASum += 3.9
@@ -35,10 +35,13 @@ func getGPA (courseList: [Course]) -> Double {
             GPASum += 1.0
         case 50...52 :
             GPASum += 0.7
-        case 0...49 :
+        case ..<49 :
             GPASum += 0
         default:
-            GPASum += 0.0
+            break
+        }
+        if weighted && Course.honors {
+            GPASum += 1.0
         }
     }
     let GPA = GPASum/Double(courseList.count)

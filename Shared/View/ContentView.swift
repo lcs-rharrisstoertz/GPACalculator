@@ -12,6 +12,8 @@ struct ContentView: View {
     @State private var newCourseName = ""
     @State private var newCourseGrade = ""
     @State private var newCourseHonors = false
+    @State private var GPA = 0.0
+    @State private var weighted = false
     var body: some View {
         List {
             ForEach (courseList.courses) { Course in
@@ -23,10 +25,17 @@ struct ContentView: View {
                 .keyboardType(.decimalPad)
             TextField ("Course name", text: $newCourseName)
             Toggle("AP/Honors", isOn: $newCourseHonors)
-            Button("+") {
+            Button("Add") {
                 courseList.courses.append(Course(honors: newCourseHonors, courseName: newCourseName, grade: Double(newCourseGrade)!))
             }
         }
+        HStack {
+            Button("Calculate GPA") {
+                GPA = getGPA(courseList: courseList.courses, weighted: weighted)
+            }
+            Toggle("Weighted", isOn: $weighted)
+        }
+        Text("Your GPA is \(GPA)")
     }
 }
 
