@@ -16,6 +16,7 @@ struct CourseView: View {
             Spacer()
             if Course.honors {
                 Text("AP/Honors")
+                    .fontWeight(.light)
             }
         }
     }

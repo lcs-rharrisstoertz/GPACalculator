@@ -34,28 +34,33 @@ struct ContentView: View {
             Section ("Add Course") {
                 HStack {
                     Text("Grade")
+                        .fontWeight(.light)
                     Slider (value: $newCourseGrade, in: 0.0...100.0,  label: {Text("Grade")}, minimumValueLabel: {Text("0")}, maximumValueLabel: {Text("100")})
                     Text("\(String(format: "%.1f", newCourseGrade))%")
                 }
                 HStack {
                     Text("Course")
+                        .fontWeight(.light)
                     TextField ("Course name", text: $newCourseName)
                 }
-                Toggle("AP/Honors", isOn: $newCourseHonors)
-                Button("Add") {
+                HStack {
+                    Text("AP/Honors")
+                        .fontWeight(.light)
+                    Toggle("", isOn: $newCourseHonors)
+                }
+                Button("Add Course") {
                     courseList.courses.append(Course(honors: newCourseHonors, courseName: newCourseName, grade: newCourseGrade))
                 }
             }
             Section ("Calculate GPA") {
-                HStack {
-                    Button("Calculate GPA") {
-                        GPA = getGPA(courseList: courseList.courses, weighted: weighted)
-                    }
-                    Toggle("Weighted", isOn: $weighted)
+                Toggle("Weighted", isOn: $weighted)
+                Button("Calculate GPA") {
+                    GPA = getGPA(courseList: courseList.courses, weighted: weighted)
                 }
-                Text("Your GPA is \(GPA)")
+                Text("Your GPA is \(String(format: "%.2f", GPA))")
             }
         }
+        
     }
 }
 
