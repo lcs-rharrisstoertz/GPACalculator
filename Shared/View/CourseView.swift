@@ -11,7 +11,7 @@ struct CourseView: View {
     var Course: Course
     var body: some View {
         HStack {
-            Text("\(Course.grade)%")
+            Text("\(String(format: "%.1f", Course.grade))%")
             Text(Course.courseName)
             Spacer()
             if Course.honors {
