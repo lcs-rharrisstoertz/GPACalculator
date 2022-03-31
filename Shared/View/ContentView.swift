@@ -2,8 +2,6 @@
 //  ContentView.swift
 //  Shared
 //
-//  Created by Harris-Stoertz, Rowan on 2022-03-25.
-//
 
 import SwiftUI
 
