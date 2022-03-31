@@ -10,7 +10,7 @@ struct GPACalculatorApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                ContentView(courseList: testList)
+                ContentView(courseList: courseList(courses: []))
             }.navigationTitle("GPA Calculator")
         }
     }
