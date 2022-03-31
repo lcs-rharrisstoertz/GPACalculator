@@ -2,8 +2,6 @@
 //  GPACalculatorApp.swift
 //  Shared
 //
-//  Created by Harris-Stoertz, Rowan on 2022-03-25.
-//
 
 import SwiftUI
 
@@ -11,7 +9,9 @@ import SwiftUI
 struct GPACalculatorApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(courseList: testList)
+            NavigationView {
+                ContentView(courseList: testList)
+            }.navigationTitle("GPA Calculator")
         }
     }
 }
