@@ -62,13 +62,15 @@ struct ContentView: View {
                 }
                 Text("Your GPA is \(String(format: "%.2f", GPA))")
             }
-        }
+        }.navigationTitle("GPA Calculator")
         
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(courseList: testList)
+        NavigationView {
+            ContentView(courseList: testList)
+        }.navigationTitle("GPA Calculator")
     }
 }
